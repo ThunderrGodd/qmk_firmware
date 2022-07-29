@@ -1,64 +1,64 @@
-# Documentation Best Practices
+# 문서화 모범 사례
 
-This page exists to document best practices when writing documentation for QMK. Following these guidelines will help to keep a consistent tone and style, which will in turn help other people more easily understand QMK.
+이 페이지는 QMK를 문서화할 때 따르면 좋은 사례들을 문서화한 것입니다. 여기의 가이드라인을 따르면 일관된 어조와 스타일을 지킴으로써, 다른 사람들이 QMK를 보다 쉽게 이해할 수 있을 것입니다.
 
-# Page Opening
+# 페이지 서두
 
-Your documentation page should generally start with an H1 heading, followed by a 1 paragraph description of what the user will find on this page. Keep in mind that this heading and paragraph will sit next to the Table of Contents, so keep the heading short and avoid long strings with no whitespace.
+문서화 페이지는 일반적으로 H1 머릿글heading으로 시작하여, 사용자가 이 페이지에서 무엇을 찾게 될 것인지를 설명하는 1문단의 글로 이어져야 합니다. 여기의 머릿글heading과 첫 문단은 목차 옆에 놓이게 될 것이므로, 띄어쓰기 없는 긴 문자열을 지양하고 짧은 표현을 사용해야 한다는 것을 기억해주시기 바랍니다.
 
-Example:
-
-```
-# My Page Title
-
-This page covers my super cool feature. You can use this feature to make coffee, squeeze fresh oj, and have an egg mcmuffin and hashbrowns delivered from your local macca's by drone.
-```
-
-# Headings
-
-Your page should generally have multiple "H1" headings. Only H1 and H2 headings will included in the Table of Contents, so plan them out appropriately. Excess width should be avoided in H1 and H2 headings to prevent the Table of Contents from getting too wide.
-
-# Styled Hint Blocks
-
-You can have styled hint blocks drawn around text to draw attention to it.
-
-### Important
+예시:
 
 ```
-!> This is important
+# 머릿글
+
+이 페이지는 본인의 짱 멋있는 기능을 다룹니다. 사용자는 이 기능을 이용하여 커피를 만들거나, 신선한 오렌지 주스를 짜내거나, 동네 메카에서 드론으로 날려온 맥머핀과 해시브라운을 먹을 수도 있습니다.
 ```
 
-Renders as:
+# 머릿글
 
-!> This is important
+각 페이지는 일반적으로 다수의 "H1" 머릿글을 가질 것잆니다. 오직 H1과 H2 머릿글만이 목차에 포함되니, 적절히 계획하시기 바랍니다. 목차가 너무 (좌우로) 길어지는 것을 방지하기 위해 H1과 H2 머릿글은 과도하게 넓어지는 것을 지양해주시기 바랍니다.
 
-### General Tips
+# 스타일 있는 힌트 블럭
+
+스타일 있는 힌트 블럭을 텍스트 주변에 둘러 독자의 이목을 환기시킬 수 있습니다.
+
+## 중요
 
 ```
-?> This is a helpful tip.
+!> 이것은 중요합니다.
 ```
 
-Renders as:
+위의 내용은 다음과 같이 구현됩니다:
 
-?> This is a helpful tip.
+!> 이것은 중요합니다.
 
+## 일반적인 팁
 
-# Documenting Features
+```
+?> 이것은 쓸모있는 팁입니다.
+```
 
-If you create a new feature for QMK, create a documentation page for it. It doesn't have to be very long, a few sentences describing your feature and a table listing any relevant keycodes is enough. Here is a basic template:
+위의 내용은 다음과 같이 구현됩니다.:
+
+?> 이것은 쓸모있는 팁입니다.
+
+# 기능 문서화
+
+만일 당신이 QMK에 새로운 기능을 만들었다면, 문서화 페이지도 생성하십시오. 길 필요는 없으며, 당신이 새로 만든 기능에 대한 설명 몇 줄과 관련있는 키 코드 몇 개를 나열하는 테이블 정도만 있어도 충분합니다. 아래는 기초적인 예시 템플릿입니다:
 
 ```markdown
-# My Cool Feature
+# 머릿글
 
-This page describes my cool feature. You can use my cool feature to make coffee and order cream and sugar to be delivered via drone.
+이 페이지는 본인의 짱 멋있는 기능을 다룹니다. 사용자는 이 기능을 이용하여 커피를 만들거나, 신선한 오렌지 주스를 짜내거나, 동네 메카에서 드론으로 날려온 맥머핀과 해시브라운을 먹을 수도 있습니다.
 
-## My Cool Feature Keycodes
 
-|Long Name|Short Name|Description|
-|---------|----------|-----------|
-|KC_COFFEE||Make Coffee|
-|KC_CREAM||Order Cream|
-|KC_SUGAR||Order Sugar|
+## 새 키 코드
+
+|긴 이름|짧은 이름|설명|
+|:---------:|:----------:|:-----------:|
+|KC_COFFEE||커피를 만든다|
+|KC_CREAM||크림을 주문한다|
+|KC_SUGAR||설탕을 주문한다|
 ```
 
-Place your documentation into `docs/feature_<my_cool_feature>.md`, and add that file to the appropriate place in `docs/_summary.md`. If you have added any keycodes be sure to add them to `docs/keycodes.md` with a link back to your feature page.
+문서를 `docs/feature_<my_cool_feature>.md` 에 넣고, 그 파일을 `docs/_summary.md` 의 적절한 곳에 놓으십시오. 만일 키 코드를 추가하였다면 반드시 해당 코드와 해당 기능 페이지로 돌아가는 링크를 `docs/keycodes.md` 에도 추가하십시오.
