@@ -1,40 +1,37 @@
-# Documentation Templates
+# 문서화 템플릿
 
-This page documents the templates you should use when submitting new Keymaps and Keyboards to QMK.
+이 페이지는 새로운 키맵과 키보드를 QMK에 제출할 때 사용할 템플릿에 대해 문서화합니다.
 
-## Keymap `readme.md` Template :id=keyboard-readmemd-template
+## 키맵 `readme.md` 템플릿 :id=keyboard-readmemd-template
 
-Most keymaps have an image depicting the layout. You can use [Keyboard Layout Editor](https://keyboard-layout-editor.com) to create an image. Upload it to [Imgur](https://imgur.com) or another hosting service, please do not include images in your Pull Request.
+대부분의 키맵은 레이아웃을 설명하는 이미지를 가지고 있습니다. 이미지 생성에는 [Keyboard Layout Editor](https://keyboard-layout-editor.com)를 이용할 수 있습니다. [Imgur](https://imgur.com) 등 타 호스팅 서비스에 이미지를 업로드하고, Pull Request에 이미지를 포함하지 마십시오.
 
-Below the image you should write a short description to help people understand your keymap.
-
-```
-![Clueboard Layout Image](https://i.imgur.com/7Capi8W.png)
-
-# Default Clueboard Layout
-
-This is the default layout that comes flashed on every Clueboard. For the most
-part it's a straightforward and easy to follow layout. The only unusual key is
-the key in the upper left, which sends Escape normally, but Grave when any of
-the Ctrl, Alt, or GUI modifiers are held down.
-```
-
-## Keyboard `readme.md` Template
+이미지 아래 사람들이 이해할 수 있도록 짧은 설명을 작성하십시오.
 
 ```
-# Planck
+![Clueboard 레이아웃 이미지](https://i.imgur.com/7Capi8W.png)
 
-![Planck](https://i.imgur.com/q2M3uEU.jpg)
+# 기본 Clueboard Layout
 
-A compact 40% (12x4) ortholinear keyboard kit made and sold by OLKB and Massdrop. [More info on qmk.fm](https://qmk.fm/planck/)
+이것은 모든 Clueboard에 플래싱되는 기본 레이아웃입니다. 대부분은 직관적이고 쓰기 좋은 레이아웃입니다. 유일하게 일반적이지 않은 키는 좌상단 키 스위치로, 평상시에는 ESC 키로 동작하며, Ctrl / Alt / GUI 모디키와 결합하면 Grave(\`) 키로 동작합니다.
+```
 
-* Keyboard Maintainer: [Jack Humbert](https://github.com/jackhumbert)
-* Hardware Supported: Planck PCB rev1, rev2, rev3, rev4, Teensy 2.0
-* Hardware Availability: [OLKB.com](https://olkb.com), [Massdrop](https://www.massdrop.com/buy/planck-mechanical-keyboard?mode=guest_open)
+## 키보드 `readme.md` 템플릿
 
-Make example for this keyboard (after setting up your build environment):
+```
+# 플랭크
+
+![플랭크](https://i.imgur.com/q2M3uEU.jpg)
+
+OLKB와 Massdrop이 판매하는 40%(12x4) 컴팩트 오쏘리니어 키보드 킷. [추가적인 정보는 qmk.fm에서 확인하세요](https://qmk.fm/planck/)
+
+* 키보드 유지·보수: [Jack Humbert](https://github.com/jackhumbert)
+* 하드웨어 지원: Planck PCB rev1, rev2, rev3, rev4, Teensy 2.0
+* 하드웨어 재고: [OLKB.com](https://olkb.com), [Massdrop](https://www.massdrop.com/buy/planck-mechanical-keyboard?mode=guest_open)
+
+이 키보드의 예시 생성하기 (빌드 환경 설정 이후):
 
     make planck/rev4:default
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+더 많은 정보는 [빌드 환경 설정하기](https://docs.qmk.fm/#/getting_started_build_tools)와 [make 안내](https://docs.qmk.fm/#/getting_started_make_guide)를 참조하세요. QMK를 처음 써보시나요? [완전 초보 가이드](https://docs.qmk.fm/#/newbs)로 시작하세요.
 ```
