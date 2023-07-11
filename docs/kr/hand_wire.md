@@ -14,11 +14,11 @@
 * 충분한 환기/팬
 * 와이어 커터/니퍼
 
-유용할수 있는 선택사항Optional but useful:
+유용할수 있는 선택사항:
 
-* 피복 스트리퍼/날카로운 칼Wire strippers/a sharp knife
-* 핀셋 &/ 작은 노즈 플라이어Tweezers and/or small needle nose pliers
-* 솔더링 스테이션/보조 집게Soldering station/Helping hands
+* 피복 스트리퍼/날카로운 칼
+* 핀셋 &/ 작은 노즈 플라이어
+* 솔더링 스테이션/보조 집게
 
 ## 빌드 시작하기
 
@@ -36,7 +36,7 @@ PCB 매트릭스를 핸드와이어 하는 데에는 많은 방법이 있습니�
 
 이것은 (플랭크같은) 오쏘리니어 키보드를 계획하는 꽤 쉬운 방법입니다.
 
-![ㅍ플랭크 매트릭스 예시시](https://i.imgur.com/FRShcLD.png)
+![플랭크 매트릭스 예시시](https://i.imgur.com/FRShcLD.png)
 Image from [RoastPotatoes' "How to hand wire a Planck"](https://blog.roastpotatoes.co/guide/2015/11/04/how-to-handwire-a-planck/)
 
 But the larger and more complicated your keyboard, the more complex the matrix.  [Keyboard Firmware Builder](https://kbfirmware.com/) can help you plan your matrix layout (shown here with a basic fullsize ISO keyboard imported from [Keyboard Layout Editor](https://www.keyboard-layout-editor.com).
