@@ -1,42 +1,42 @@
-# Hand-Wiring Guide
+# 핸드와이어링 가이드
 
-## Parts list
+## 부품 목록
 
-You will need: (where *x* is the number of keys on your planned keyboard)
+필요한 것들: (*x*는 당신이 계획중인 키보드의 키의 갯수입니다)
 
-* QMK compatible microcontroller board (Teensy, Pro-Micro, QMK Proton C etc.)
-* *x* keyswitches (MX, Matias, Gateron, etc)
-* *x* through hole diodes
-* Keyboard plate and plate mount stabilisers
-* Wire
-* Soldering iron
-* Rosin-cored solder
-* Adequate ventilation/a fan
-* Wire cutters/snippers
+* QMK를 지원하는 마이크로컨트롤러 보드 (Teensy, 프로마이크로 , QMK Proton C 등.)
+* 스위치 *x*개 (체리 MX, Matias, 게이트론, 등)
+* 쓰루홀 다이오드 *x*개
+* 키보드 보강판과 보강판용 스테빌라이저
+* 전기선
+* 인두기
+* 로진 코어 땜납
+* 충분한 환기/팬
+* 와이어 커터/니퍼
 
-Optional but useful:
+유용할수 있는 선택사항Optional but useful:
 
-* Wire strippers/a sharp knife
-* Tweezers and/or small needle nose pliers
-* Soldering station/Helping hands
+* 피복 스트리퍼/날카로운 칼Wire strippers/a sharp knife
+* 핀셋 &/ 작은 노즈 플라이어Tweezers and/or small needle nose pliers
+* 솔더링 스테이션/보조 집게Soldering station/Helping hands
 
-## Starting the build
+## 빌드 시작하기
 
-There are many ways to hand wire a PCB matrix, this guide will describe the fundamentals as well as some recommended ways to go about it.
+PCB 매트릭스를 핸드와이어 하는 데에는 많은 방법이 있습니다. 이 가이드에서는 기초적인 부분과 몇몇 추천하는 방법을 기술할 것입니다.
 
-As we are dealing with hand wiring, it is assumed that you already have a plate.  If you are planning a completely custom layout, tools such as [ai03 Plate Generator](https://kbplate.ai03.me/) and [Swillkb Plate & Case Builder](http://builder.swillkb.com/) can help when designing one.
+우리는 핸드와이어링을 진행할 것이므로, 당신이 이미 보강판을 가지고 있다고 가정하겠습니다. 만약 당신이 당신만의 커스텀 레이아웃을 계획중이라면, [ai03 보강판 생성기](https://kbplate.ai03.me/) 와 [Swillkb 보강판&케이스 빌더](http://builder.swillkb.com/) 같은 툴이 도움이 될 것입니다.
 
-Start by installing the switches and stabilisers in the plate. Depending on the thickness and material this may also involve hot gluing it in place.
+보강판에 스위치와 스테빌라이저를 제자리에 꽂는 것으로 시작하십시오. 보강판의 두께와 재질에 따라 글루건으로 칠해야 할 수 있습니다.
 
-## Planning the matrix
+## 매트릭스 계획하기
 
-If you are following a pre-existing handwire guide (e.g. for the keyboards in the [handwire firmware section](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired) you can skip this step, just ensure you wire the matrix as described.
+만약 당신이 핸드와이어 예제를 따르는 중이라면 (예를 들어 [핸드와이어 펌웨어 폴더](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired)의 키보드들같은), 이 단계를 생략할 수 있습니다. 단, 묘사된 대로 매트릭스를 연결했는지 확인하십시오.
 
-What you want to achieve is one leg from each switch being attached to the corresponding switches next to it (rows) and the other leg being attached to the switches above and below it (columns) and a diode to one of the legs, mosy commonly this will be the leg attached to the rows, and the diode will face away from it (Column to Row) i.e. with the wire furthest from the black line on the diode connected to the switch (as current will only travel in one direction through a diode).
+당신이 이루려고 하는 것은 각 스위치의 한쪽 다리를 양옆에 있는, 짝이 맞는 스위치에 연결하는 것이며(rows), 또한 다른쪽 다리를 위아래의 스위치에 연결하는 것이고 (columns), 다이오드를 한쪽 다리(매우 흔하게 rows 쪽의)에 연결하는 것입니다. 그리고 다이오드는 거기서 먼 쪽을 향하게 될 것입니다 (Column to Row) 그리고 검은 선으로 보이듯이, 스위치에 연결된 다이오드끼리 연결해야 합니다 (전류는 다이오드를 통해 한 방향으로만 진행할 것입니다).
 
-It is fairly simple to plan for an ortholinear keyboard (like a Planck).
+이것은 (플랭크같은) 오쏘리니어 키보드를 계획하는 꽤 쉬운 방법입니다.
 
-![Example Planck matrix](https://i.imgur.com/FRShcLD.png)
+![ㅍ플랭크 매트릭스 예시시](https://i.imgur.com/FRShcLD.png)
 Image from [RoastPotatoes' "How to hand wire a Planck"](https://blog.roastpotatoes.co/guide/2015/11/04/how-to-handwire-a-planck/)
 
 But the larger and more complicated your keyboard, the more complex the matrix.  [Keyboard Firmware Builder](https://kbfirmware.com/) can help you plan your matrix layout (shown here with a basic fullsize ISO keyboard imported from [Keyboard Layout Editor](https://www.keyboard-layout-editor.com).
